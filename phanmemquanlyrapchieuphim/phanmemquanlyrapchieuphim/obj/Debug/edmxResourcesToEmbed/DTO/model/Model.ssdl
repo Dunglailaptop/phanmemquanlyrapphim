@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="phanmemquanlyrapchieuphimModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="Username" />
+    </Key>
+    <Property Name="Username" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" />
+    <Property Name="Manhanvien" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="baocaosuco">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tieude" Type="nvarchar" MaxLength="255" />
+    <Property Name="moto" Type="nvarchar(max)" />
+    <Property Name="picture" Type="image" />
+    <Property Name="Maloai" Type="int" />
+    <Property Name="Manhanvien" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="chitietghe">
+    <Key>
+      <PropertyRef Name="Machitietghe" />
+    </Key>
+    <Property Name="Machieu" Type="int" Nullable="false" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Machitietghe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Maghe" Type="int" />
+  </EntityType>
+  <EntityType Name="chitiethoadonsp">
+    <Key>
+      <PropertyRef Name="Mahoadon" />
+    </Key>
+    <Property Name="Mahoadon" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Masp" Type="int" />
+    <Property Name="soluong" Type="int" />
+    <Property Name="giasp" Type="float" />
+  </EntityType>
+  <EntityType Name="chitietsuatchieu">
+    <Key>
+      <PropertyRef Name="Machitietsuatchieu" />
+    </Key>
+    <Property Name="Machitietsuatchieu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Machieu" Type="int" />
+    <Property Name="Maphim" Type="int" />
+    <Property Name="Ngaybatdau" Type="date" />
+    <Property Name="giave" Type="decimal" Precision="5" Scale="3" />
+  </EntityType>
+  <EntityType Name="danhmucsp">
+    <Key>
+      <PropertyRef Name="Madm" />
+    </Key>
+    <Property Name="Madm" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tendanhmuc" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ghe">
+    <Key>
+      <PropertyRef Name="Maghe" />
+    </Key>
+    <Property Name="Maghe" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Soghe" Type="int" Nullable="false" />
+    <Property Name="Row" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Maphong" Type="int" Nullable="false" />
+    <Property Name="trangthaighe" Type="int" />
+    <Property Name="maloaighe" Type="int" />
+  </EntityType>
+  <EntityType Name="hoadon">
+    <Key>
+      <PropertyRef Name="Mahoadon" />
+    </Key>
+    <Property Name="Makhachhang" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Manhanvien" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="maphim" Type="int" />
+    <Property Name="soluongve" Type="int" />
+    <Property Name="giaveduocgiam" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="tongtien" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Mahoadon" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ngaytao" Type="datetime" />
+  </EntityType>
+  <EntityType Name="hoadonsanpham">
+    <Key>
+      <PropertyRef Name="Mahoadon" />
+    </Key>
+    <Property Name="Mahoadon" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Masp" Type="int" />
+    <Property Name="giatien" Type="float" />
+    <Property Name="soluong" Type="int" />
+    <Property Name="Ngaytao" Type="date" />
+    <Property Name="Manhanvien" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="khachhang">
+    <Key>
+      <PropertyRef Name="Makh" />
+    </Key>
+    <Property Name="Makh" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="255" />
+    <Property Name="sdt" Type="char" MaxLength="11" />
+    <Property Name="ngaytao" Type="date" />
+    <Property Name="email" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="loaighe">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenloai" Type="nvarchar" MaxLength="200" />
+    <Property Name="mausac" Type="nvarchar(max)" />
+    <Property Name="giaghe" Type="int" />
+  </EntityType>
+  <EntityType Name="loaihonghoc">
+    <Key>
+      <PropertyRef Name="Maloai" />
+    </Key>
+    <Property Name="Maloai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenloai" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="nhanvien">
+    <Key>
+      <PropertyRef Name="Manhanvien" />
+    </Key>
+    <Property Name="Manhanvien" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="sdt" Type="char" MaxLength="11" />
+    <Property Name="Ngaysinh" Type="date" />
+    <Property Name="Ngaybatdau" Type="date" />
+    <Property Name="Machucvu" Type="int" />
+  </EntityType>
+  <EntityType Name="phanloaighebyphong">
+    <Key>
+      <PropertyRef Name="idpl" />
+    </Key>
+    <Property Name="idpl" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Maphong" Type="int" Nullable="false" />
+    <Property Name="Maloai" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phanquyen">
+    <Key>
+      <PropertyRef Name="Machucvu" />
+    </Key>
+    <Property Name="Machucvu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tenchucvu" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phieuchi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngaynhap" Type="date" />
+    <Property Name="thoigian" Type="time" Precision="7" />
+    <Property Name="sotien" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Manhanvien" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="phim">
+    <Key>
+      <PropertyRef Name="Maphim" />
+    </Key>
+    <Property Name="Maphim" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tenphim" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Tacgia" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Namphathanh" Type="date" Nullable="false" />
+    <Property Name="Matheloai" Type="int" />
+    <Property Name="Maquocgia" Type="int" />
+    <Property Name="Thoiluong" Type="int" />
+    <Property Name="mota" Type="nvarchar(max)" />
+    <Property Name="loaiphim" Type="varchar" MaxLength="50" />
+    <Property Name="poster" Type="image" />
+  </EntityType>
+  <EntityType Name="phong">
+    <Key>
+      <PropertyRef Name="Maphong" />
+    </Key>
+    <Property Name="Maphong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tongsoghe" Type="int" />
+    <Property Name="tenphong" Type="nvarchar" MaxLength="20" />
+    <Property Name="gheofday" Type="int" />
+    <Property Name="active" Type="int" />
+  </EntityType>
+  <EntityType Name="quanlythuchi">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ngaynhap" Type="date" />
+    <Property Name="thoigian" Type="time" Precision="7" />
+    <Property Name="sotien" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Manhanvien" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="quocgia">
+    <Key>
+      <PropertyRef Name="Maquocgia" />
+    </Key>
+    <Property Name="Maquocgia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tenquocgia" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sanpham">
+    <Key>
+      <PropertyRef Name="Masp" />
+    </Key>
+    <Property Name="Masp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Tensanpham" Type="nvarchar" MaxLength="255" />
+    <Property Name="Madanhmuc" Type="int" />
+    <Property Name="soluong" Type="int" />
+    <Property Name="hinhanh" Type="image" />
+    <Property Name="Gia" Type="decimal" Precision="18" Scale="3" />
+  </EntityType>
+  <EntityType Name="suatchieu">
+    <Key>
+      <PropertyRef Name="Machieu" />
+    </Key>
+    <Property Name="Machieu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Maphong" Type="int" />
+    <Property Name="Maphim" Type="int" />
+    <Property Name="thoigianchieu" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'phanmemquanlyrapchieuphim.dbo.suatchieuphim' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="suatchieuphim">
+    <Key>
+      <PropertyRef Name="Maphim" />
+      <PropertyRef Name="Tenphim" />
+    </Key>
+    <Property Name="Maphim" Type="int" Nullable="false" />
+    <Property Name="Tenphim" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="loaiphim" Type="varchar" MaxLength="50" />
+    <Property Name="Thoiluong" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="theloai">
+    <Key>
+      <PropertyRef Name="Matheloai" />
+    </Key>
+    <Property Name="Matheloai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tentheloai" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'phanmemquanlyrapchieuphim.dbo.thoigian' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="thoigian">
+          <Property Name="thoigianchieu" Type="time" Precision="7" />
+        </EntityType>-->
+  <EntityType Name="vexem">
+    <Key>
+      <PropertyRef Name="Mave" />
+    </Key>
+    <Property Name="Mave" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Maghe" Type="int" Nullable="false" />
+    <Property Name="Machieu" Type="int" Nullable="false" />
+    <Property Name="Mahoadon" Type="varchar" MaxLength="15" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <Association Name="kp_account_nhanvien">
+    <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="0..1" />
+    <End Role="account" Type="Self.account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhanvien">
+        <PropertyRef Name="Manhanvien" />
+      </Principal>
+      <Dependent Role="account">
+        <PropertyRef Name="Manhanvien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_chitietghe_Machieu">
+    <End Role="suatchieu" Type="Self.suatchieu" Multiplicity="1" />
+    <End Role="chitietghe" Type="Self.chitietghe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="suatchieu">
+        <PropertyRef Name="Machieu" />
+      </Principal>
+      <Dependent Role="chitietghe">
+        <PropertyRef Name="Machieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_chitiethoadon_Masp">
+    <End Role="sanpham" Type="Self.sanpham" Multiplicity="0..1" />
+    <End Role="chitiethoadonsp" Type="Self.chitiethoadonsp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanpham">
+        <PropertyRef Name="Masp" />
+      </Principal>
+      <Dependent Role="chitiethoadonsp">
+        <PropertyRef Name="Masp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_chitietsuatchieu_Machieu">
+    <End Role="suatchieu" Type="Self.suatchieu" Multiplicity="0..1" />
+    <End Role="chitietsuatchieu" Type="Self.chitietsuatchieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="suatchieu">
+        <PropertyRef Name="Machieu" />
+      </Principal>
+      <Dependent Role="chitietsuatchieu">
+        <PropertyRef Name="Machieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_chitietsuatchieu_Maphim">
+    <End Role="phim" Type="Self.phim" Multiplicity="0..1" />
+    <End Role="chitietsuatchieu" Type="Self.chitietsuatchieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phim">
+        <PropertyRef Name="Maphim" />
+      </Principal>
+      <Dependent Role="chitietsuatchieu">
+        <PropertyRef Name="Maphim" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_ghe_maphong">
+    <End Role="phong" Type="Self.phong" Multiplicity="1" />
+    <End Role="ghe" Type="Self.ghe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phong">
+        <PropertyRef Name="Maphong" />
+      </Principal>
+      <Dependent Role="ghe">
+        <PropertyRef Name="Maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_hoadon_maphim">
+    <End Role="phim" Type="Self.phim" Multiplicity="0..1" />
+    <End Role="hoadon" Type="Self.hoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phim">
+        <PropertyRef Name="Maphim" />
+      </Principal>
+      <Dependent Role="hoadon">
+        <PropertyRef Name="maphim" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_hoadonsanpham_manhanvien">
+    <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="0..1" />
+    <End Role="hoadonsanpham" Type="Self.hoadonsanpham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhanvien">
+        <PropertyRef Name="Manhanvien" />
+      </Principal>
+      <Dependent Role="hoadonsanpham">
+        <PropertyRef Name="Manhanvien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_hoadonsanpham_masp">
+    <End Role="sanpham" Type="Self.sanpham" Multiplicity="0..1" />
+    <End Role="hoadonsanpham" Type="Self.hoadonsanpham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sanpham">
+        <PropertyRef Name="Masp" />
+      </Principal>
+      <Dependent Role="hoadonsanpham">
+        <PropertyRef Name="Masp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_hodon_Manhanvien">
+    <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="1" />
+    <End Role="hoadon" Type="Self.hoadon" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhanvien">
+        <PropertyRef Name="Manhanvien" />
+      </Principal>
+      <Dependent Role="hoadon">
+        <PropertyRef Name="Manhanvien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_loaighe_maloaighe">
+    <End Role="loaighe" Type="Self.loaighe" Multiplicity="0..1" />
+    <End Role="ghe" Type="Self.ghe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loaighe">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="ghe">
+        <PropertyRef Name="maloaighe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_machieu_masuatchieu">
+    <End Role="suatchieu" Type="Self.suatchieu" Multiplicity="1" />
+    <End Role="vexem" Type="Self.vexem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="suatchieu">
+        <PropertyRef Name="Machieu" />
+      </Principal>
+      <Dependent Role="vexem">
+        <PropertyRef Name="Machieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_maghe_maghe">
+    <End Role="ghe" Type="Self.ghe" Multiplicity="1" />
+    <End Role="vexem" Type="Self.vexem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ghe">
+        <PropertyRef Name="Maghe" />
+      </Principal>
+      <Dependent Role="vexem">
+        <PropertyRef Name="Maghe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_magheg_ghe">
+    <End Role="ghe" Type="Self.ghe" Multiplicity="0..1" />
+    <End Role="chitietghe" Type="Self.chitietghe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ghe">
+        <PropertyRef Name="Maghe" />
+      </Principal>
+      <Dependent Role="chitietghe">
+        <PropertyRef Name="Maghe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_mahoadon_mahoadon">
+    <End Role="hoadon" Type="Self.hoadon" Multiplicity="0..1" />
+    <End Role="vexem" Type="Self.vexem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="hoadon">
+        <PropertyRef Name="Mahoadon" />
+      </Principal>
+      <Dependent Role="vexem">
+        <PropertyRef Name="Mahoadon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_nhanvien_chuvu">
+    <End Role="phanquyen" Type="Self.phanquyen" Multiplicity="0..1" />
+    <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phanquyen">
+        <PropertyRef Name="Machucvu" />
+      </Principal>
+      <Dependent Role="nhanvien">
+        <PropertyRef Name="Machucvu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_nhanvien_manv">
+    <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="0..1" />
+    <End Role="baocaosuco" Type="Self.baocaosuco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhanvien">
+        <PropertyRef Name="Manhanvien" />
+      </Principal>
+      <Dependent Role="baocaosuco">
+        <PropertyRef Name="Manhanvien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_phieuchi_nhanvien">
+    <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="1" />
+    <End Role="phieuchi" Type="Self.phieuchi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhanvien">
+        <PropertyRef Name="Manhanvien" />
+      </Principal>
+      <Dependent Role="phieuchi">
+        <PropertyRef Name="Manhanvien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_phim_Maquocgia">
+    <End Role="quocgia" Type="Self.quocgia" Multiplicity="0..1" />
+    <End Role="phim" Type="Self.phim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="quocgia">
+        <PropertyRef Name="Maquocgia" />
+      </Principal>
+      <Dependent Role="phim">
+        <PropertyRef Name="Maquocgia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_phim_matheloai">
+    <End Role="theloai" Type="Self.theloai" Multiplicity="0..1" />
+    <End Role="phim" Type="Self.phim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="theloai">
+        <PropertyRef Name="Matheloai" />
+      </Principal>
+      <Dependent Role="phim">
+        <PropertyRef Name="Matheloai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_quanlythuchimanhanvien_nhanvien">
+    <End Role="nhanvien" Type="Self.nhanvien" Multiplicity="1" />
+    <End Role="quanlythuchi" Type="Self.quanlythuchi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="nhanvien">
+        <PropertyRef Name="Manhanvien" />
+      </Principal>
+      <Dependent Role="quanlythuchi">
+        <PropertyRef Name="Manhanvien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_sanpham_madanhmuc">
+    <End Role="danhmucsp" Type="Self.danhmucsp" Multiplicity="0..1" />
+    <End Role="sanpham" Type="Self.sanpham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="danhmucsp">
+        <PropertyRef Name="Madm" />
+      </Principal>
+      <Dependent Role="sanpham">
+        <PropertyRef Name="Madanhmuc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_sco_maloai">
+    <End Role="loaihonghoc" Type="Self.loaihonghoc" Multiplicity="0..1" />
+    <End Role="baocaosuco" Type="Self.baocaosuco" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loaihonghoc">
+        <PropertyRef Name="Maloai" />
+      </Principal>
+      <Dependent Role="baocaosuco">
+        <PropertyRef Name="Maloai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_suatchieu_maphim">
+    <End Role="phim" Type="Self.phim" Multiplicity="0..1" />
+    <End Role="suatchieu" Type="Self.suatchieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phim">
+        <PropertyRef Name="Maphim" />
+      </Principal>
+      <Dependent Role="suatchieu">
+        <PropertyRef Name="Maphim" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kp_suatchieu_maphong">
+    <End Role="phong" Type="Self.phong" Multiplicity="0..1" />
+    <End Role="suatchieu" Type="Self.suatchieu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phong">
+        <PropertyRef Name="Maphong" />
+      </Principal>
+      <Dependent Role="suatchieu">
+        <PropertyRef Name="Maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="pk_maloai_loaighe">
+    <End Role="loaighe" Type="Self.loaighe" Multiplicity="1" />
+    <End Role="phanloaighebyphong" Type="Self.phanloaighebyphong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loaighe">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="phanloaighebyphong">
+        <PropertyRef Name="Maloai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="pk_maphong_phong">
+    <End Role="phong" Type="Self.phong" Multiplicity="1" />
+    <End Role="phanloaighebyphong" Type="Self.phanloaighebyphong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phong">
+        <PropertyRef Name="Maphong" />
+      </Principal>
+      <Dependent Role="phanloaighebyphong">
+        <PropertyRef Name="Maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="phanmemquanlyrapchieuphimModelStoreContainer">
+    <EntitySet Name="account" EntityType="Self.account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="baocaosuco" EntityType="Self.baocaosuco" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="chitietghe" EntityType="Self.chitietghe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="chitiethoadonsp" EntityType="Self.chitiethoadonsp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="chitietsuatchieu" EntityType="Self.chitietsuatchieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="danhmucsp" EntityType="Self.danhmucsp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ghe" EntityType="Self.ghe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hoadon" EntityType="Self.hoadon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hoadonsanpham" EntityType="Self.hoadonsanpham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="khachhang" EntityType="Self.khachhang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="loaighe" EntityType="Self.loaighe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="loaihonghoc" EntityType="Self.loaihonghoc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="nhanvien" EntityType="Self.nhanvien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phanloaighebyphong" EntityType="Self.phanloaighebyphong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phanquyen" EntityType="Self.phanquyen" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phieuchi" EntityType="Self.phieuchi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phim" EntityType="Self.phim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phong" EntityType="Self.phong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="quanlythuchi" EntityType="Self.quanlythuchi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="quocgia" EntityType="Self.quocgia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sanpham" EntityType="Self.sanpham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="suatchieu" EntityType="Self.suatchieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="theloai" EntityType="Self.theloai" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vexem" EntityType="Self.vexem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="suatchieuphim" EntityType="Self.suatchieuphim" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [suatchieuphim].[Maphim] AS [Maphim], 
+    [suatchieuphim].[Tenphim] AS [Tenphim], 
+    [suatchieuphim].[loaiphim] AS [loaiphim], 
+    [suatchieuphim].[Thoiluong] AS [Thoiluong]
+    FROM [dbo].[suatchieuphim] AS [suatchieuphim]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="kp_account_nhanvien" Association="Self.kp_account_nhanvien">
+      <End Role="nhanvien" EntitySet="nhanvien" />
+      <End Role="account" EntitySet="account" />
+    </AssociationSet>
+    <AssociationSet Name="kp_chitietghe_Machieu" Association="Self.kp_chitietghe_Machieu">
+      <End Role="suatchieu" EntitySet="suatchieu" />
+      <End Role="chitietghe" EntitySet="chitietghe" />
+    </AssociationSet>
+    <AssociationSet Name="kp_chitiethoadon_Masp" Association="Self.kp_chitiethoadon_Masp">
+      <End Role="sanpham" EntitySet="sanpham" />
+      <End Role="chitiethoadonsp" EntitySet="chitiethoadonsp" />
+    </AssociationSet>
+    <AssociationSet Name="kp_chitietsuatchieu_Machieu" Association="Self.kp_chitietsuatchieu_Machieu">
+      <End Role="suatchieu" EntitySet="suatchieu" />
+      <End Role="chitietsuatchieu" EntitySet="chitietsuatchieu" />
+    </AssociationSet>
+    <AssociationSet Name="kp_chitietsuatchieu_Maphim" Association="Self.kp_chitietsuatchieu_Maphim">
+      <End Role="phim" EntitySet="phim" />
+      <End Role="chitietsuatchieu" EntitySet="chitietsuatchieu" />
+    </AssociationSet>
+    <AssociationSet Name="kp_ghe_maphong" Association="Self.kp_ghe_maphong">
+      <End Role="phong" EntitySet="phong" />
+      <End Role="ghe" EntitySet="ghe" />
+    </AssociationSet>
+    <AssociationSet Name="kp_hoadon_maphim" Association="Self.kp_hoadon_maphim">
+      <End Role="phim" EntitySet="phim" />
+      <End Role="hoadon" EntitySet="hoadon" />
+    </AssociationSet>
+    <AssociationSet Name="kp_hoadonsanpham_manhanvien" Association="Self.kp_hoadonsanpham_manhanvien">
+      <End Role="nhanvien" EntitySet="nhanvien" />
+      <End Role="hoadonsanpham" EntitySet="hoadonsanpham" />
+    </AssociationSet>
+    <AssociationSet Name="kp_hoadonsanpham_masp" Association="Self.kp_hoadonsanpham_masp">
+      <End Role="sanpham" EntitySet="sanpham" />
+      <End Role="hoadonsanpham" EntitySet="hoadonsanpham" />
+    </AssociationSet>
+    <AssociationSet Name="kp_hodon_Manhanvien" Association="Self.kp_hodon_Manhanvien">
+      <End Role="nhanvien" EntitySet="nhanvien" />
+      <End Role="hoadon" EntitySet="hoadon" />
+    </AssociationSet>
+    <AssociationSet Name="kp_loaighe_maloaighe" Association="Self.kp_loaighe_maloaighe">
+      <End Role="loaighe" EntitySet="loaighe" />
+      <End Role="ghe" EntitySet="ghe" />
+    </AssociationSet>
+    <AssociationSet Name="kp_machieu_masuatchieu" Association="Self.kp_machieu_masuatchieu">
+      <End Role="suatchieu" EntitySet="suatchieu" />
+      <End Role="vexem" EntitySet="vexem" />
+    </AssociationSet>
+    <AssociationSet Name="kp_maghe_maghe" Association="Self.kp_maghe_maghe">
+      <End Role="ghe" EntitySet="ghe" />
+      <End Role="vexem" EntitySet="vexem" />
+    </AssociationSet>
+    <AssociationSet Name="kp_magheg_ghe" Association="Self.kp_magheg_ghe">
+      <End Role="ghe" EntitySet="ghe" />
+      <End Role="chitietghe" EntitySet="chitietghe" />
+    </AssociationSet>
+    <AssociationSet Name="kp_mahoadon_mahoadon" Association="Self.kp_mahoadon_mahoadon">
+      <End Role="hoadon" EntitySet="hoadon" />
+      <End Role="vexem" EntitySet="vexem" />
+    </AssociationSet>
+    <AssociationSet Name="kp_nhanvien_chuvu" Association="Self.kp_nhanvien_chuvu">
+      <End Role="phanquyen" EntitySet="phanquyen" />
+      <End Role="nhanvien" EntitySet="nhanvien" />
+    </AssociationSet>
+    <AssociationSet Name="kp_nhanvien_manv" Association="Self.kp_nhanvien_manv">
+      <End Role="nhanvien" EntitySet="nhanvien" />
+      <End Role="baocaosuco" EntitySet="baocaosuco" />
+    </AssociationSet>
+    <AssociationSet Name="kp_phieuchi_nhanvien" Association="Self.kp_phieuchi_nhanvien">
+      <End Role="nhanvien" EntitySet="nhanvien" />
+      <End Role="phieuchi" EntitySet="phieuchi" />
+    </AssociationSet>
+    <AssociationSet Name="kp_phim_Maquocgia" Association="Self.kp_phim_Maquocgia">
+      <End Role="quocgia" EntitySet="quocgia" />
+      <End Role="phim" EntitySet="phim" />
+    </AssociationSet>
+    <AssociationSet Name="kp_phim_matheloai" Association="Self.kp_phim_matheloai">
+      <End Role="theloai" EntitySet="theloai" />
+      <End Role="phim" EntitySet="phim" />
+    </AssociationSet>
+    <AssociationSet Name="kp_quanlythuchimanhanvien_nhanvien" Association="Self.kp_quanlythuchimanhanvien_nhanvien">
+      <End Role="nhanvien" EntitySet="nhanvien" />
+      <End Role="quanlythuchi" EntitySet="quanlythuchi" />
+    </AssociationSet>
+    <AssociationSet Name="kp_sanpham_madanhmuc" Association="Self.kp_sanpham_madanhmuc">
+      <End Role="danhmucsp" EntitySet="danhmucsp" />
+      <End Role="sanpham" EntitySet="sanpham" />
+    </AssociationSet>
+    <AssociationSet Name="kp_sco_maloai" Association="Self.kp_sco_maloai">
+      <End Role="loaihonghoc" EntitySet="loaihonghoc" />
+      <End Role="baocaosuco" EntitySet="baocaosuco" />
+    </AssociationSet>
+    <AssociationSet Name="kp_suatchieu_maphim" Association="Self.kp_suatchieu_maphim">
+      <End Role="phim" EntitySet="phim" />
+      <End Role="suatchieu" EntitySet="suatchieu" />
+    </AssociationSet>
+    <AssociationSet Name="kp_suatchieu_maphong" Association="Self.kp_suatchieu_maphong">
+      <End Role="phong" EntitySet="phong" />
+      <End Role="suatchieu" EntitySet="suatchieu" />
+    </AssociationSet>
+    <AssociationSet Name="pk_maloai_loaighe" Association="Self.pk_maloai_loaighe">
+      <End Role="loaighe" EntitySet="loaighe" />
+      <End Role="phanloaighebyphong" EntitySet="phanloaighebyphong" />
+    </AssociationSet>
+    <AssociationSet Name="pk_maphong_phong" Association="Self.pk_maphong_phong">
+      <End Role="phong" EntitySet="phong" />
+      <End Role="phanloaighebyphong" EntitySet="phanloaighebyphong" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

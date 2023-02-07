@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="21.2.6.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="RP_HOADON" Margins="100, 100, 100, 82" PaperKind="A5" PageWidth="583" PageHeight="827" Version="21.2" DataAdapter="#Ref-0" Font="Arial, 9.75pt">
+  <Bands>
+    <Item1 Ref="2" ControlType="TopMarginBand" Name="TopMargin">
+      <Controls>
+        <Item1 Ref="3" ControlType="XRLabel" Name="xrLabel1" Multiline="true" Text="Vé xem phim" TextAlignment="MiddleCenter" SizeF="207.5,45.5" LocationFloat="87.5,10" Font="Arial, 20pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="4" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+      </Controls>
+    </Item1>
+    <Item2 Ref="5" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="82.5">
+      <Controls>
+        <Item1 Ref="6" ControlType="XRLine" Name="xrLine6" SizeF="383,23" LocationFloat="0,24.33334" />
+      </Controls>
+    </Item2>
+    <Item3 Ref="7" ControlType="DetailBand" Name="Detail" HeightF="495">
+      <Controls>
+        <Item1 Ref="8" ControlType="XRLabel" Name="xrLabel2" Multiline="true" Text="(Bao gồm 5% VAT)" SizeF="136.8332,23.00003" LocationFloat="236.1666,472" Font="Times New Roman, 11pt" Padding="2,2,0,0,100">
+          <StylePriority Ref="9" UseFont="false" />
+        </Item1>
+        <Item2 Ref="10" ControlType="XRTable" Name="xrTable9" SizeF="362.9998,25" LocationFloat="10.00013,440.8333" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="11" ControlType="XRTableRow" Name="xrTableRow9" Weight="1">
+              <Cells>
+                <Item1 Ref="12" ControlType="XRTableCell" Name="xrTableCell15" Weight="1.5647383301090891" Multiline="true" Text="PERSON" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="13" UseFont="false" />
+                </Item1>
+                <Item2 Ref="14" ControlType="XRTableCell" Name="xrTableCell16" Weight="0.79063359069278893" Multiline="true" Text="VND" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="15" UseFont="false" />
+                </Item2>
+                <Item3 Ref="16" ControlType="XRTableCell" Name="xrTableCell17" Weight="0.644628079198122" Multiline="true" Text="0" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="17" UseFont="false" />
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item2>
+        <Item3 Ref="18" ControlType="XRLine" Name="xrLine5" SizeF="383,23.00003" LocationFloat="5.086263E-05,406.6667" />
+        <Item4 Ref="19" ControlType="XRLine" Name="xrLine4" SizeF="383,10.5" LocationFloat="2.543131E-05,406.6667" />
+        <Item5 Ref="20" ControlType="XRTable" Name="xrTable8" SizeF="362.9997,25" LocationFloat="10.00013,381.6667" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="21" ControlType="XRTableRow" Name="xrTableRow8" Weight="1">
+              <Cells>
+                <Item1 Ref="22" ControlType="XRTableCell" Name="xrTableCell13" Weight="1" Multiline="true" Text="RAP 1" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="23" UseFont="false" />
+                </Item1>
+                <Item2 Ref="24" ControlType="XRTableCell" Name="xrTableCell14" Weight="1.9999993694711686" Multiline="true" Text="A1" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="25" UseFont="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item5>
+        <Item6 Ref="26" ControlType="XRTable" Name="xrTable7" SizeF="362.9999,25" LocationFloat="10.00013,330" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="27" ControlType="XRTableRow" Name="xrTableRow7" Weight="1">
+              <Cells>
+                <Item1 Ref="28" ControlType="XRTableCell" Name="xrTableCell11" Weight="1" Multiline="true" Text="07/01/2023" Font="Times New Roman, 13pt">
+                  <StylePriority Ref="29" UseFont="false" />
+                </Item1>
+                <Item2 Ref="30" ControlType="XRTableCell" Name="xrTableCell12" Weight="2" Multiline="true" Text="12:00 PM" Font="Times New Roman, 13pt">
+                  <StylePriority Ref="31" UseFont="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item6>
+        <Item7 Ref="32" ControlType="XRTable" Name="xrTable6" SizeF="363,25" LocationFloat="9.999847,285.8333" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="33" ControlType="XRTableRow" Name="xrTableRow6" Weight="1">
+              <Cells>
+                <Item1 Ref="34" ControlType="XRTableCell" Name="xrTableCell10" Weight="1" Multiline="true" Text="Name movie" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="35" UseFont="false" />
+                </Item1>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item7>
+        <Item8 Ref="36" ControlType="XRLine" Name="xrLine3" SizeF="383,19.66672" LocationFloat="5.086263E-05,246.8333" />
+        <Item9 Ref="37" ControlType="XRLine" Name="xrLine2" SizeF="383,13" LocationFloat="5.086263E-05,246.8333" />
+        <Item10 Ref="38" ControlType="XRTable" Name="xrTable5" SizeF="362.9999,25" LocationFloat="9.999974,200" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="39" ControlType="XRTableRow" Name="xrTableRow5" Weight="1">
+              <Cells>
+                <Item1 Ref="40" ControlType="XRTableCell" Name="xrTableCell8" Weight="0.82185551430404336" Multiline="true" Text="Staff:" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="41" UseFont="false" />
+                </Item1>
+                <Item2 Ref="42" ControlType="XRTableCell" Name="xrTableCell9" Weight="2.1781439812731458" Multiline="true" Text="Nguyễn Xuân Tiến Dũng" Font="Times New Roman, 13pt">
+                  <StylePriority Ref="43" UseFont="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item10>
+        <Item11 Ref="44" ControlType="XRTable" Name="xrTable4" SizeF="362.9999,25" LocationFloat="9.999949,158.3333" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="45" ControlType="XRTableRow" Name="xrTableRow4" Weight="1">
+              <Cells>
+                <Item1 Ref="46" ControlType="XRTableCell" Name="xrTableCell6" Weight="0.82185609990264685" Multiline="true" Text="07/01/2023" Font="Times New Roman, 13pt">
+                  <StylePriority Ref="47" UseFont="false" />
+                </Item1>
+                <Item2 Ref="48" ControlType="XRTableCell" Name="xrTableCell7" Weight="2.1781444045202911" Multiline="true" Text="12:00 PM" Font="Times New Roman, 13pt">
+                  <StylePriority Ref="49" UseFont="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item11>
+        <Item12 Ref="50" ControlType="XRTable" Name="xrTable3" SizeF="362.9999,25" LocationFloat="9.999949,118.3333" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="51" ControlType="XRTableRow" Name="xrTableRow3" Weight="1">
+              <Cells>
+                <Item1 Ref="52" ControlType="XRTableCell" Name="xrTableCell5" Weight="1.1500002288818361" Multiline="true" Text="My Home Cinema" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="53" UseFont="false" />
+                </Item1>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item12>
+        <Item13 Ref="54" ControlType="XRLine" Name="xrLine1" LineStyle="DashDot" SizeF="383,18.33334" LocationFloat="5.086263E-05,86.66666" BorderDashStyle="Dash">
+          <StylePriority Ref="55" UseBorderDashStyle="false" />
+        </Item13>
+        <Item14 Ref="56" ControlType="XRTable" Name="xrTable2" SizeF="362.9999,25" LocationFloat="9.999974,52.5" Padding="2,2,0,0,96">
+          <Rows>
+            <Item1 Ref="57" ControlType="XRTableRow" Name="xrTableRow2" Weight="1">
+              <Cells>
+                <Item1 Ref="58" ControlType="XRTableCell" Name="xrTableCell3" Weight="0.99444488525390617" Multiline="true" Text="Mã số:" Font="Times New Roman, 13pt">
+                  <StylePriority Ref="59" UseFont="false" />
+                </Item1>
+                <Item2 Ref="60" ControlType="XRTableCell" Name="xrTableCell4" Weight="2.6355545043945314" Multiline="true" Text="HD123" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="61" UseFont="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+          </Rows>
+        </Item14>
+        <Item15 Ref="62" ControlType="XRTable" Name="xrTable1" SizeF="362.9999,25.83333" LocationFloat="10,10" Font="Times New Roman, 13pt" Padding="2,2,0,0,96" BorderWidth="1">
+          <Rows>
+            <Item1 Ref="63" ControlType="XRTableRow" Name="xrTableRow1" Weight="1">
+              <Cells>
+                <Item1 Ref="64" ControlType="XRTableCell" Name="xrTableCell1" Weight="0.87530571673163993" Multiline="true" Text="Người dùng:" />
+                <Item2 Ref="65" ControlType="XRTableCell" Name="xrTableCell2" Weight="2.3198034065137381" Multiline="true" Text="Khách hàng" Font="Times New Roman, 13pt, style=Bold">
+                  <StylePriority Ref="66" UseFont="false" />
+                </Item2>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="67" UseFont="false" UseBorderWidth="false" />
+        </Item15>
+      </Controls>
+    </Item3>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="68" />
+    <Item2 Ref="69" />
+  </ComponentStorage>
+  <ObjectStorage>
+    <Item1 ObjectType="DevExpress.XtraReports.Serialization.ObjectStorageInfo, DevExpress.XtraReports.v21.2" Ref="0" Content="~Xtra#NULL" Type="phanmemquanlyrapchieuphim.phanmemquanlyrapchieuphimDataSetTableAdapters.phimTableAdapter" />
+  </ObjectStorage>
+</XtraReportsLayoutSerializer>

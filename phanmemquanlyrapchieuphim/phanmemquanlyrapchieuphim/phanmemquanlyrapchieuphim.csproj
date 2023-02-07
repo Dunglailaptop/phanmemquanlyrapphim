@@ -1,0 +1,1301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props" Condition="Exists('..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8119D0F1-EDA3-4570-9720-4F4F1D7F03BD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>phanmemquanlyrapchieuphim</RootNamespace>
+    <AssemblyName>phanmemquanlyrapchieuphim</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Costura, Version=3.3.3.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Costura.Fody.3.3.3\lib\net40\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.123\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core.Desktop, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.AccessControl.6.0.0\lib\net461\Microsoft.Win32.Registry.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.SystemEvents, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.SystemEvents.6.0.0\lib\net461\Microsoft.Win32.SystemEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftOfficeCore.15.0.0\lib\net35\Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RestSharp, Version=100.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharpSigned.105.2.3\lib\net46\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Odbc, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.Odbc.6.0.0\lib\net461\System.Data.Odbc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OleDb, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.OleDb.6.0.0\lib\net461\System.Data.OleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.EventLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.EventLog.6.0.0\lib\net461\System.Diagnostics.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.PerformanceCounter, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.PerformanceCounter.6.0.0\lib\net461\System.Diagnostics.PerformanceCounter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.AccessControl.5.0.0\lib\net461\System.IO.FileSystem.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.6.0.0\lib\net461\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipes.AccessControl, Version=4.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Pipes.AccessControl.5.0.0\lib\net461\System.IO.Pipes.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Ports, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Ports.6.0.0\lib\net461\System.IO.Ports.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Context" />
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.6.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Cng, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Cng.5.0.0\lib\net47\System.Security.Cryptography.Cng.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Pkcs, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Pkcs.6.0.0\lib\net461\System.Security.Cryptography.Pkcs.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.ProtectedData.6.0.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Xml.6.0.0\lib\net461\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.6.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Duplex, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Duplex.4.9.0\lib\net461\System.ServiceModel.Duplex.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Http, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Http.4.9.0\lib\net461\System.ServiceModel.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.NetTcp.4.9.0\lib\net461\System.ServiceModel.NetTcp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Primitives.4.9.0\lib\net461\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Security, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Security.4.9.0\lib\net461\System.ServiceModel.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Syndication, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Syndication.6.0.0\lib\net461\System.ServiceModel.Syndication.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.ServiceProcess.ServiceController, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceProcess.ServiceController.6.0.0\lib\net461\System.ServiceProcess.ServiceController.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.AccessControl.6.0.0\lib\net461\System.Threading.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.Services.Description, Version=4.9.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Web.Services.Description.4.9.0\lib\net461\System.Web.Services.Description.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\crypt.cs" />
+    <Compile Include="DAO\danhmucspDAO.cs" />
+    <Compile Include="DAO\Exportexcel.cs" />
+    <Compile Include="DAO\gheDAO.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\honghocDAO.cs" />
+    <Compile Include="DAO\khachhangDAO.cs" />
+    <Compile Include="DAO\loaigheDAO.cs" />
+    <Compile Include="DAO\nhanvienDAO.cs" />
+    <Compile Include="DAO\phieuchiDAO.cs" />
+    <Compile Include="DAO\phieuthuDAO.cs" />
+    <Compile Include="DAO\phongDAO.cs" />
+    <Compile Include="DAO\quanlythuchiDAO.cs" />
+    <Compile Include="DAO\QuocgiaDAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DAO\suatchieuDAO.cs" />
+    <Compile Include="DAO\TheloaiphimDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\phimDAO.cs" />
+    <Compile Include="DAO\voucherDAO.cs" />
+    <Compile Include="DTO\model\account.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\baocaosuco.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\chitietghe.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\chitiethoadonsp.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\chitietsuatchieu.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\danhmucsp.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\ghe.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\hoadon.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\hoadonsanpham.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\khachhang.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\loaighe.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\loaihonghoc.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\nhanvien.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\phanloaighebyphong.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\phanquyen.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\phieuchi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\phim.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\phong.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\quanlythuchi.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\quocgia.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\sanpham.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\suatchieu.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\suatchieuphim.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\sysdiagram.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\theloai.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\model\vexem.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\phims.cs" />
+    <Compile Include="DTO\Class.cs" />
+    <Compile Include="DTO\innerjoin.cs" />
+    <Compile Include="FormManager\frCHITIETSUATCHIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frCHITIETSUATCHIEU.Designer.cs">
+      <DependentUpon>frCHITIETSUATCHIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frCHITIETSUATCHIEUPHIM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frCHITIETSUATCHIEUPHIM.Designer.cs">
+      <DependentUpon>frCHITIETSUATCHIEUPHIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frCHITIETDANHMUC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frCHITIETDANHMUC.Designer.cs">
+      <DependentUpon>frCHITIETDANHMUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYFOOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYFOOD.Designer.cs">
+      <DependentUpon>frQUANLYFOOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYHOADONFOOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYHOADONFOOD.Designer.cs">
+      <DependentUpon>frQUANLYHOADONFOOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYHOADONVE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYHOADONVE.Designer.cs">
+      <DependentUpon>frQUANLYHOADONVE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\FRQUANLYKHACHHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\FRQUANLYKHACHHANG.Designer.cs">
+      <DependentUpon>FRQUANLYKHACHHANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYKHUYENMAI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYKHUYENMAI.Designer.cs">
+      <DependentUpon>frQUANLYKHUYENMAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYNHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYNHANVIEN.Designer.cs">
+      <DependentUpon>frQUANLYNHANVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\FrQUANLYPHONG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\FrQUANLYPHONG.Designer.cs">
+      <DependentUpon>FrQUANLYPHONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYSUATCHIEUPHIM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYSUATCHIEUPHIM.Designer.cs">
+      <DependentUpon>frQUANLYSUATCHIEUPHIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYTHUCAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYTHUCAN.Designer.cs">
+      <DependentUpon>frQUANLYTHUCAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frTHEMSANPHAM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frTHEMSANPHAM.Designer.cs">
+      <DependentUpon>frTHEMSANPHAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\FRTHEMSUATCHIEUPHIM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\FRTHEMSUATCHIEUPHIM.Designer.cs">
+      <DependentUpon>FRTHEMSUATCHIEUPHIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frthongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frthongke.Designer.cs">
+      <DependentUpon>frthongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frXEMCHITIETTHUCAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frXEMCHITIETTHUCAN.Designer.cs">
+      <DependentUpon>frXEMCHITIETTHUCAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYPHIM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\frQUANLYPHIM.Designer.cs">
+      <DependentUpon>frQUANLYPHIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\themsuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManager\themsuat.Designer.cs">
+      <DependentUpon>themsuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\us_loaighe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormManager\us_loaighe.Designer.cs">
+      <DependentUpon>us_loaighe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\Us_PHONG.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormManager\Us_PHONG.Designer.cs">
+      <DependentUpon>Us_PHONG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\US_qlnhanvien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormManager\US_qlnhanvien.Designer.cs">
+      <DependentUpon>US_qlnhanvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\US_Quanlythucan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormManager\US_Quanlythucan.Designer.cs">
+      <DependentUpon>US_Quanlythucan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\US_SUATCHIEU.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormManager\US_SUATCHIEU.Designer.cs">
+      <DependentUpon>US_SUATCHIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\XtraUserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormManager\XtraUserControl1.Designer.cs">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManager\XtraUserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormManager\XtraUserControl2.Designer.cs">
+      <DependentUpon>XtraUserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\Cons.cs" />
+    <Compile Include="FormStaff\DATVEXEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\DATVEXEM.Designer.cs">
+      <DependentUpon>DATVEXEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\FRBAOCAOSUCO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\FRBAOCAOSUCO.Designer.cs">
+      <DependentUpon>FRBAOCAOSUCO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frDATDOAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frDATDOAN.Designer.cs">
+      <DependentUpon>frDATDOAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frDATVE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frDATVE.Designer.cs">
+      <DependentUpon>frDATVE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frDATVEXEM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frDATVEXEM.Designer.cs">
+      <DependentUpon>frDATVEXEM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frHOADON.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frHOADON.Designer.cs">
+      <DependentUpon>frHOADON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frHOADONFOOD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frHOADONFOOD.Designer.cs">
+      <DependentUpon>frHOADONFOOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\FRQUANLYTHONGTINCANHAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\FRQUANLYTHONGTINCANHAN.Designer.cs">
+      <DependentUpon>FRQUANLYTHONGTINCANHAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frQUENMATKHAU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frQUENMATKHAU.Designer.cs">
+      <DependentUpon>frQUENMATKHAU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frQUENMATKHAU2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frQUENMATKHAU2.Designer.cs">
+      <DependentUpon>frQUENMATKHAU2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frSUAMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frSUAMK.Designer.cs">
+      <DependentUpon>frSUAMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frTHANHTOAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frTHANHTOAN.Designer.cs">
+      <DependentUpon>frTHANHTOAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\frXEMSUATCHIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\frXEMSUATCHIEU.Designer.cs">
+      <DependentUpon>frXEMSUATCHIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\FR_NHAPTIENMAY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\FR_NHAPTIENMAY.Designer.cs">
+      <DependentUpon>FR_NHAPTIENMAY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\us_HOADONFOOD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormStaff\us_HOADONFOOD.Designer.cs">
+      <DependentUpon>us_HOADONFOOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\us_suatchieu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormStaff\us_suatchieu.Designer.cs">
+      <DependentUpon>us_suatchieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\Us_DSFOOD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormStaff\Us_DSFOOD.Designer.cs">
+      <DependentUpon>Us_DSFOOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\US_DSPHIM.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormStaff\US_DSPHIM.Designer.cs">
+      <DependentUpon>US_DSPHIM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\Us_HDFOOD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormStaff\Us_HDFOOD.Designer.cs">
+      <DependentUpon>Us_HDFOOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\us_tongtien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormStaff\us_tongtien.Designer.cs">
+      <DependentUpon>us_tongtien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStaff\XEMSUATCHIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStaff\XEMSUATCHIEU.Designer.cs">
+      <DependentUpon>XEMSUATCHIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frDangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frDangnhap.Designer.cs">
+      <DependentUpon>frDangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuDevExpress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuDevExpress.Designer.cs">
+      <DependentUpon>MenuDevExpress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuManager.cs" />
+    <Compile Include="MenuStaffdev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuStaffdev.Designer.cs">
+      <DependentUpon>MenuStaffdev.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menustaffdevpress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menustaffdevpress.Designer.cs">
+      <DependentUpon>Menustaffdevpress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="phanmemquanlyrapchieuphimDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>phanmemquanlyrapchieuphimDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\RP_HOADON.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RP_HOADON.Designer.cs">
+      <DependentUpon>RP_HOADON.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\rp_HOADONFOOD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\rp_HOADONFOOD.Designer.cs">
+      <DependentUpon>rp_HOADONFOOD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuSatff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuSatff.Designer.cs">
+      <DependentUpon>MenuSatff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TRANGCHU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TRANGCHU.Designer.cs">
+      <DependentUpon>TRANGCHU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANGNHAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANGNHAP.Designer.cs">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DANGNHAP.resx">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frCHITIETSUATCHIEU.resx">
+      <DependentUpon>frCHITIETSUATCHIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frCHITIETSUATCHIEUPHIM.resx">
+      <DependentUpon>frCHITIETSUATCHIEUPHIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frCHITIETDANHMUC.resx">
+      <DependentUpon>frCHITIETDANHMUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frQUANLYFOOD.resx">
+      <DependentUpon>frQUANLYFOOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frQUANLYHOADONFOOD.resx">
+      <DependentUpon>frQUANLYHOADONFOOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frQUANLYHOADONVE.resx">
+      <DependentUpon>frQUANLYHOADONVE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\FRQUANLYKHACHHANG.resx">
+      <DependentUpon>FRQUANLYKHACHHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frQUANLYKHUYENMAI.resx">
+      <DependentUpon>frQUANLYKHUYENMAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frQUANLYNHANVIEN.resx">
+      <DependentUpon>frQUANLYNHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\FrQUANLYPHONG.resx">
+      <DependentUpon>FrQUANLYPHONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frQUANLYSUATCHIEUPHIM.resx">
+      <DependentUpon>frQUANLYSUATCHIEUPHIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frQUANLYTHUCAN.resx">
+      <DependentUpon>frQUANLYTHUCAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frTHEMSANPHAM.resx">
+      <DependentUpon>frTHEMSANPHAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\FRTHEMSUATCHIEUPHIM.resx">
+      <DependentUpon>FRTHEMSUATCHIEUPHIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frthongke.resx">
+      <DependentUpon>frthongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frXEMCHITIETTHUCAN.resx">
+      <DependentUpon>frXEMCHITIETTHUCAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\frQUANLYPHIM.resx">
+      <DependentUpon>frQUANLYPHIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\themsuat.resx">
+      <DependentUpon>themsuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\us_loaighe.resx">
+      <DependentUpon>us_loaighe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\Us_PHONG.resx">
+      <DependentUpon>Us_PHONG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\US_qlnhanvien.resx">
+      <DependentUpon>US_qlnhanvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\US_Quanlythucan.resx">
+      <DependentUpon>US_Quanlythucan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\US_SUATCHIEU.resx">
+      <DependentUpon>US_SUATCHIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\XtraUserControl1.resx">
+      <DependentUpon>XtraUserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManager\XtraUserControl2.resx">
+      <DependentUpon>XtraUserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\DATVEXEM.resx">
+      <DependentUpon>DATVEXEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\FRBAOCAOSUCO.resx">
+      <DependentUpon>FRBAOCAOSUCO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frDATDOAN.resx">
+      <DependentUpon>frDATDOAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frDATVE.resx">
+      <DependentUpon>frDATVE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frDATVEXEM.resx">
+      <DependentUpon>frDATVEXEM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frHOADON.resx">
+      <DependentUpon>frHOADON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frHOADONFOOD.resx">
+      <DependentUpon>frHOADONFOOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\FRQUANLYTHONGTINCANHAN.resx">
+      <DependentUpon>FRQUANLYTHONGTINCANHAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frQUENMATKHAU.resx">
+      <DependentUpon>frQUENMATKHAU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frQUENMATKHAU2.resx">
+      <DependentUpon>frQUENMATKHAU2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frSUAMK.resx">
+      <DependentUpon>frSUAMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frTHANHTOAN.resx">
+      <DependentUpon>frTHANHTOAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\frXEMSUATCHIEU.resx">
+      <DependentUpon>frXEMSUATCHIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\FR_NHAPTIENMAY.resx">
+      <DependentUpon>FR_NHAPTIENMAY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\us_HOADONFOOD.resx">
+      <DependentUpon>us_HOADONFOOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\us_suatchieu.resx">
+      <DependentUpon>us_suatchieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\Us_DSFOOD.resx">
+      <DependentUpon>Us_DSFOOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\US_DSPHIM.resx">
+      <DependentUpon>US_DSPHIM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\Us_HDFOOD.resx">
+      <DependentUpon>Us_HDFOOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\us_tongtien.resx">
+      <DependentUpon>us_tongtien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStaff\XEMSUATCHIEU.resx">
+      <DependentUpon>XEMSUATCHIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frDangnhap.resx">
+      <DependentUpon>frDangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuDevExpress.resx">
+      <DependentUpon>MenuDevExpress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuStaffdev.resx">
+      <DependentUpon>MenuStaffdev.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menustaffdevpress.resx">
+      <DependentUpon>Menustaffdevpress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\RP_HOADON.resx">
+      <DependentUpon>RP_HOADON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\rp_HOADONFOOD.resx">
+      <DependentUpon>rp_HOADONFOOD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuSatff.resx">
+      <DependentUpon>MenuSatff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TRANGCHU.resx">
+      <DependentUpon>TRANGCHU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DTO\DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DTO\DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <EntityDeploy Include="DTO\model\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DTO\model\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="phanmemquanlyrapchieuphimDataSet.xsc">
+      <DependentUpon>phanmemquanlyrapchieuphimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="phanmemquanlyrapchieuphimDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>phanmemquanlyrapchieuphimDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="phanmemquanlyrapchieuphimDataSet.xss">
+      <DependentUpon>phanmemquanlyrapchieuphimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-ball-point-pen-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\kisspng-film-cinema-computer-icons-movie-poster-5b5d05142ddb52.7271254315328228041878.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-trash-can-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-split-money-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-folder-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-movie-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-calendar-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-food-cart-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-present-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-delete-trash-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-delete-trash-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-dollar-coin-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-logout-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-film-reel-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-movie-theater-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-house-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-movie-ticket-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-popcorn-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imglogo\icons8-movie-reel-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-page-size-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-page-size-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cinema-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cinema-screen-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-movie-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cinema-screen-321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\encrypt_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\encrypt_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updatedataextract.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alignverticalright_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_16x161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_32x326.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_16x162.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x326.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x166.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_32x323.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_16x163.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_32x325.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x165.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_32x324.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear_16x164.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x327.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x167.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DTO\model\Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DTO\model\Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </Content>
+    <None Include="imglogo\cinema-clipart-transparent-background-7.png" />
+    <Content Include="imglogo\icons8_clear_symbol_100px.png" />
+    <Content Include="imglogo\icons8_cyber_monday_100px.png" />
+    <Content Include="imglogo\icons8_summer_sales_32px.png" />
+    <Content Include="imglogo\icons8_undo_100px.png" />
+    <Content Include="imglogo\icons8_undo_32px.png" />
+    <Content Include="imglogo\icons8_winter_sales_100px.png" />
+    <None Include="Resources\currency_32x32.png" />
+    <None Include="Resources\bosale_32x32.png" />
+    <None Include="Resources\clear_32x325.png" />
+    <Content Include="Resources\icons8_cash_register_100px.png" />
+    <Content Include="Resources\icons8_contact_32px_1.png" />
+    <Content Include="Resources\icons8_high_priority_32px_2.png" />
+    <Content Include="Resources\icons8_maintenance_100px_1.png" />
+    <Content Include="Resources\icons8_money_bag_100px.png" />
+    <None Include="Resources\icons8_money_box_32px.png" />
+    <Content Include="Resources\icons8_Tools_100px.png" />
+    <Content Include="Resources\icons8_Tools_100px_1.png" />
+    <Content Include="Resources\icons8_Tools_100px_2.png" />
+    <Content Include="Resources\icons8_Tools_100px_6.png" />
+    <Content Include="Resources\icons8_Tools_100px_7.png" />
+    <Content Include="Resources\icons8_Tools_100px_8.png" />
+    <Content Include="Resources\icons8_Tools_100px_9.png" />
+    <None Include="Resources\redo_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Fody.4.0.2\build\Fody.targets" Condition="Exists('..\packages\Fody.4.0.2\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.4.0.2\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.4.0.2\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Costura.Fody.3.3.3\build\Costura.Fody.props'))" />
+  </Target>
+</Project>

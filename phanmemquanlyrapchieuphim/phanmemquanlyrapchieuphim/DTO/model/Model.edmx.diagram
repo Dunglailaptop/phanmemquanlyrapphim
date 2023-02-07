@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="66e3f60fd56e4c6b88d3eb5a2862ef3f" Name="Diagram1">
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.account" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.baocaosuco" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.chitietghe" Width="1.5" PointX="10.5" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.chitiethoadonsp" Width="1.5" PointX="5.25" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.chitietsuatchieu" Width="1.5" PointX="10.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.danhmucsp" Width="1.5" PointX="0.75" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.ghe" Width="1.5" PointX="8.25" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.hoadon" Width="1.5" PointX="8.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.hoadonsanpham" Width="1.5" PointX="5.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.khachhang" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.loaighe" Width="1.5" PointX="6" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.loaihonghoc" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.nhanvien" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.phanloaighebyphong" Width="1.5" PointX="11.25" PointY="28" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.phanquyen" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.phieuchi" Width="1.5" PointX="5.25" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.phim" Width="1.5" PointX="6" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.phong" Width="1.5" PointX="6" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.quanlythuchi" Width="1.5" PointX="5.25" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.quocgia" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.sanpham" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.suatchieu" Width="1.5" PointX="8.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.sysdiagram" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.theloai" Width="1.5" PointX="3.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.vexem" Width="1.5" PointX="10.5" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="phanmemquanlyrapchieuphimModel.suatchieuphim" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_account_nhanvien" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_nhanvien_manv" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_sco_maloai" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_chitietghe_Machieu" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_magheg_ghe" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_chitiethoadon_Masp" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_chitietsuatchieu_Machieu" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_chitietsuatchieu_Maphim" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_sanpham_madanhmuc" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_ghe_maphong" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_loaighe_maloaighe" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_maghe_maghe" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_hoadon_maphim" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_hodon_Manhanvien" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_mahoadon_mahoadon" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_hoadonsanpham_manhanvien" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_hoadonsanpham_masp" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.pk_maloai_loaighe" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_nhanvien_chuvu" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_phieuchi_nhanvien" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_quanlythuchimanhanvien_nhanvien" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.pk_maphong_phong" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_phim_Maquocgia" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_phim_matheloai" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_suatchieu_maphim" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_suatchieu_maphong" ManuallyRouted="false" />
+        <AssociationConnector Association="phanmemquanlyrapchieuphimModel.kp_machieu_masuatchieu" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,224 @@
+﻿namespace phanmemquanlyrapchieuphim.FormManager
+{
+    partial class US_SUATCHIEU
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(US_SUATCHIEU));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbthoiluong = new System.Windows.Forms.Label();
+            this.lbtheloai = new System.Windows.Forms.Label();
+            this.lbloaiphim = new System.Windows.Forms.Label();
+            this.LBtenphim = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbphong = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbphong);
+            this.panel1.Controls.Add(this.lbthoiluong);
+            this.panel1.Controls.Add(this.lbtheloai);
+            this.panel1.Controls.Add(this.lbloaiphim);
+            this.panel1.Controls.Add(this.LBtenphim);
+            this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(929, 198);
+            this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lbthoiluong
+            // 
+            this.lbthoiluong.AutoSize = true;
+            this.lbthoiluong.Location = new System.Drawing.Point(347, 132);
+            this.lbthoiluong.Name = "lbthoiluong";
+            this.lbthoiluong.Size = new System.Drawing.Size(44, 16);
+            this.lbthoiluong.TabIndex = 9;
+            this.lbthoiluong.Text = "label8";
+            // 
+            // lbtheloai
+            // 
+            this.lbtheloai.AutoSize = true;
+            this.lbtheloai.Location = new System.Drawing.Point(315, 92);
+            this.lbtheloai.Name = "lbtheloai";
+            this.lbtheloai.Size = new System.Drawing.Size(44, 16);
+            this.lbtheloai.TabIndex = 8;
+            this.lbtheloai.Text = "label7";
+            // 
+            // lbloaiphim
+            // 
+            this.lbloaiphim.AutoSize = true;
+            this.lbloaiphim.Location = new System.Drawing.Point(337, 52);
+            this.lbloaiphim.Name = "lbloaiphim";
+            this.lbloaiphim.Size = new System.Drawing.Size(44, 16);
+            this.lbloaiphim.TabIndex = 7;
+            this.lbloaiphim.Text = "label6";
+            // 
+            // LBtenphim
+            // 
+            this.LBtenphim.AutoSize = true;
+            this.LBtenphim.Location = new System.Drawing.Point(325, 14);
+            this.LBtenphim.Name = "LBtenphim";
+            this.LBtenphim.Size = new System.Drawing.Size(44, 16);
+            this.LBtenphim.TabIndex = 6;
+            this.LBtenphim.Text = "label5";
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Download;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(197, 150);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(144, 37);
+            this.iconButton1.TabIndex = 5;
+            this.iconButton1.Text = "suất chiếu";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(192, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 29);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Thời lượng:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(190, 81);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 29);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Thể loại:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(190, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 29);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Loại phim:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(190, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tên phim: ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(181, 184);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Yellow;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 199);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(929, 108);
+            this.flowLayoutPanel1.TabIndex = 1;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // lbphong
+            // 
+            this.lbphong.AutoSize = true;
+            this.lbphong.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbphong.Location = new System.Drawing.Point(781, 3);
+            this.lbphong.Name = "lbphong";
+            this.lbphong.Size = new System.Drawing.Size(21, 29);
+            this.lbphong.TabIndex = 10;
+            this.lbphong.Text = " ";
+            // 
+            // US_SUATCHIEU
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel1);
+            this.Name = "US_SUATCHIEU";
+            this.Size = new System.Drawing.Size(929, 307);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbthoiluong;
+        private System.Windows.Forms.Label lbtheloai;
+        private System.Windows.Forms.Label lbloaiphim;
+        private System.Windows.Forms.Label LBtenphim;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbphong;
+    }
+}
